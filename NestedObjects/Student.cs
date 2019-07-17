@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//INCLUDE VALIDATION IN ALL CLASSES
 namespace NestedObjects
 {
     /// <summary>
