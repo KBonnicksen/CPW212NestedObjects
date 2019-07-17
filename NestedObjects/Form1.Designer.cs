@@ -30,7 +30,7 @@
         {
             this.lstInstructors = new System.Windows.Forms.ListBox();
             this.lstCourses = new System.Windows.Forms.ListBox();
-            this.lstStusents = new System.Windows.Forms.ListBox();
+            this.lstStudents = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.lstInstructors.Name = "lstInstructors";
             this.lstInstructors.Size = new System.Drawing.Size(227, 212);
             this.lstInstructors.TabIndex = 0;
+            this.lstInstructors.SelectedIndexChanged += new System.EventHandler(this.LstInstructors_SelectedIndexChanged);
             // 
             // lstCourses
             // 
@@ -51,14 +52,15 @@
             this.lstCourses.Name = "lstCourses";
             this.lstCourses.Size = new System.Drawing.Size(227, 212);
             this.lstCourses.TabIndex = 1;
+            this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.LstCourses_SelectedIndexChanged);
             // 
-            // lstStusents
+            // lstStudents
             // 
-            this.lstStusents.FormattingEnabled = true;
-            this.lstStusents.Location = new System.Drawing.Point(557, 42);
-            this.lstStusents.Name = "lstStusents";
-            this.lstStusents.Size = new System.Drawing.Size(227, 212);
-            this.lstStusents.TabIndex = 2;
+            this.lstStudents.FormattingEnabled = true;
+            this.lstStudents.Location = new System.Drawing.Point(557, 42);
+            this.lstStudents.Name = "lstStudents";
+            this.lstStudents.Size = new System.Drawing.Size(227, 212);
+            this.lstStudents.TabIndex = 2;
             // 
             // label1
             // 
@@ -95,11 +97,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstStusents);
+            this.Controls.Add(this.lstStudents);
             this.Controls.Add(this.lstCourses);
             this.Controls.Add(this.lstInstructors);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,7 +112,7 @@
 
         private System.Windows.Forms.ListBox lstInstructors;
         private System.Windows.Forms.ListBox lstCourses;
-        private System.Windows.Forms.ListBox lstStusents;
+        private System.Windows.Forms.ListBox lstStudents;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
