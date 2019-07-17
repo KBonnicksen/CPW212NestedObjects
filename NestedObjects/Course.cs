@@ -44,5 +44,13 @@ namespace NestedObjects
         /// The students currently enrolled in the course
         /// </summary>
         public List<Student> Roster { get; set; }
+
+        public string CourseDisplay
+        {
+            get
+            {
+                return $"{CourseNumber} {Title}";
+            }
+        }
     }
 }
